@@ -110,7 +110,7 @@ function select() {
                                 flag3 = 0;//存在未被选中元素
                             }
                         }
-                       var parent = get_pre(shop_list_in_name[father_input][r].parentNode);
+                        var parent = get_pre(get_pre(shop_list_in_name[father_input][r].parentNode));
                         if(!flag2){
                             parent.getElementsByTagName('input')[0].checked = 0;
                         }else{
@@ -176,12 +176,22 @@ function all_check() {
     for(var s = 0; s<all_select.length;s++){
         (function (s) {
             all_select[s].getElementsByTagName('input')[0].addEventListener('change',function () {
+                change_hook_bg(all_select);
                 search_number(g_list);
                 calculat_all_pay(g_list);
             });
         })(s);
     }
-
+}
+function change_hook_bg(arr) {
+    for(var p = 0; p<arr.length; p++){
+        var tmp = arr[p].getElementsByTagName('input')[0];
+        if(tmp.checked) {
+            arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: url(images/red_right.png) no-repeat -4px;';
+        }else{
+            arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: none';
+        }
+    }
 }
 /**
  * 增减商品数量，同时计算最终所选商品数量之和search_number,计算应付总额calculat_all_pay

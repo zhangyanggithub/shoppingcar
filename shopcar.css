@@ -6,17 +6,43 @@
 a{
     text-decoration: none;
 }
+input[type=checkbox]{
+    width: 15px;
+    height: 15px;
+}
 #shopping-car{
     width:1188px;
     height:auto;
     margin:0 auto;
     font-size: 12px;
 }
+#select-all-box{
+    position: relative;
+}
+#select-all-box .out-input{
+    position: absolute;
+    top: 4px;
+    left: 1px;
+
+}
 li{
     list-style-type: none;
 }
-#select-all-box{
-
+.out-input{
+    position: absolute;
+    top:13px;
+    left:13px;
+    width: 13px;
+    border: thin solid #d6cfcf;
+    height: 13px;
+    float: left;
+    background: transparent;
+}
+.out-input input{
+    opacity: 0;
+    position: absolute;
+    top:0;
+    left:0;
 }
 #car-menu{
     height:50px;
@@ -42,6 +68,9 @@ li{
 .g-handle{
     width:119px;
 }
+.g-item{
+    position: relative;
+}
 .fl{
     float:left;
     line-height:50px;
@@ -52,7 +81,7 @@ li{
     text-align: center;
 }
 .select input{
-    background-color: red;
+    background:url("images/red_right.png") no-repeat;
     cursor:pointer;
 }
 .item-shop-name{
@@ -60,10 +89,27 @@ li{
     width:100%;
     margin-left: 10px;
 }
+.item-shop-name .out-input{
+    float:left;
+    position: absolute;
+    top: 0;
+    left: 1px;
+}
+.shop-name{
+    float:left;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+
+}
+.item-checkbox{
+    position: relative;
+}
 .store-in-list{
     overflow: hidden;
 }
 .store-in-list li{
+    position: relative;
     background: #FCFCFC;
     margin:20px 0;
     height:120px;
@@ -222,6 +268,6 @@ li{
     width:10px;
     height:10px;
     padding: 0px 5px;
-
 }
+
 
