@@ -52,7 +52,7 @@ li{
     text-align: center;
 }
 .select input{
-    background-color: transparent;
+    background-color: red;
     cursor:pointer;
 }
 .item-shop-name{

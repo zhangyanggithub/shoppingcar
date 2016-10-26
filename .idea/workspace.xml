@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e5a1d-8062-4569-bd19-fa0f52f63289" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/red_right.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopcar.css" afterPath="$PROJECT_DIR$/shopcar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopping-car.js" afterPath="$PROJECT_DIR$/shopping-car.js" />
     </list>
@@ -27,11 +29,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shopcar.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shopcar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shopcar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+            <state relative-caret-position="67">
+              <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -63,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shopping-car.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="276" column="42" selection-start-line="276" selection-start-column="42" selection-end-line="276" selection-end-column="42" />
+            <state relative-caret-position="460">
+              <caret line="272" column="40" selection-start-line="272" selection-start-column="40" selection-end-line="272" selection-end-column="40" />
               <folding>
                 <element signature="n#!!doc;n#$#0" expanded="false" />
                 <element signature="n#!!block;n#$#0" expanded="false" />
@@ -112,8 +114,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/shoppingCar.html" />
-        <option value="$PROJECT_DIR$/shopping-car.js" />
         <option value="$PROJECT_DIR$/shopcar.css" />
+        <option value="$PROJECT_DIR$/shopping-car.js" />
       </list>
     </option>
   </component>
@@ -186,12 +188,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\张洋\WebstormProjects\shoppingcar" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\张洋\WebstormProjects\shoppingcar\images" />
       <recent name="C:\Users\张洋\WebstormProjects\shoppingcar\shoppingCar" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\张洋\WebstormProjects\shoppingcar" />
     </key>
   </component>
   <component name="RunManager">
@@ -264,12 +266,12 @@
       <updated>1477299111435</updated>
       <workItem from="1477299112638" duration="7378000" />
       <workItem from="1477354138958" duration="33760000" />
-      <workItem from="1477440474929" duration="10642000" />
+      <workItem from="1477440474929" duration="12191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51780000" />
+    <option name="totallyTimeSpent" value="53329000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -439,6 +441,14 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shopcar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="54" column="25" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shoppingCar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -465,8 +475,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shopping-car.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="276" column="42" selection-start-line="276" selection-start-column="42" selection-end-line="276" selection-end-column="42" />
+        <state relative-caret-position="460">
+          <caret line="272" column="40" selection-start-line="272" selection-start-column="40" selection-end-line="272" selection-end-column="40" />
           <folding>
             <element signature="n#!!doc;n#$#0" expanded="false" />
             <element signature="n#!!block;n#$#0" expanded="false" />
@@ -491,14 +501,6 @@
             <element signature="n#!!block;n#selet_all#0" expanded="false" />
             <element signature="n#!!doc;n#search_number#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shopcar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>

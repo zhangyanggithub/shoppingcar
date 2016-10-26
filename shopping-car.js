@@ -268,7 +268,9 @@ function selet_all(flag,arr) {
 function search_number(arr) {
     var selected_sum = 0;
     for(var p = 0; p<arr.length; p++){
-        if(arr[p].getElementsByTagName('input')[0].checked) {
+        var tmp = arr[p].getElementsByTagName('input')[0];
+        if(tmp.checked) {
+           tmp.style.cssText = 'background:url("images/red_right.png") no-repeat';
             bg_change(arr[p].parentNode,'#FFF8E1');
             //商品行对应的商品件数
             var every_sum = parseInt(arr[p].parentNode.getElementsByClassName('every-sum')[0].value);
