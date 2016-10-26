@@ -10,11 +10,15 @@ input[type=checkbox]{
     width: 15px;
     height: 15px;
 }
+.g-car-content{
+    position: relative;
+}
 #shopping-car{
     width:1188px;
     height:auto;
     margin:0 auto;
     font-size: 12px;
+    position: relative;
 }
 #select-all-box{
     position: relative;
@@ -200,14 +204,14 @@ li{
     line-height: 25px;
 }
 #pay{
-    width:100%;
-    height:50px;
-    margin-bottom:100px;
+    width: 1185px;
+    height: 50px;
+    margin-bottom: 100px;
     position: fixed;
-    top:750px;
-    left:0;
+    top: 752px;
+    left: 201px;
     z-index: 2;
-    background-color: #FFF;
+    background-color: #e9eeff;
 }
 #pay li{
     float:left;
@@ -230,6 +234,7 @@ li{
     text-align: center;
     font-family: 'Lantinghei SC','Microsoft Yahei';
     font-size: 20px;
+    cursor: pointer;
 }
 #g-selected{
     width:130px;

@@ -186,12 +186,47 @@ function all_check() {
 function change_hook_bg(arr) {
     for(var p = 0; p<arr.length; p++){
         var tmp = arr[p].getElementsByTagName('input')[0];
+      /*  var submit = $('#last-pay');
+        var pay_all = $('#g-pay-all');*/
         if(tmp.checked) {
             arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: url(images/red_right.png) no-repeat -4px;';
+           /*c(pay_all.innerHTML.substr(1));
+            if(pay_all.innerHTML.substr(1) == "0"){
+               submit.style.backgroundColor = '#B0B0B0';
+           }else{
+               submit.style.backgroundColor = '#f40';
+           }*/
         }else{
             arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: none';
         }
     }
+}
+function submit_bg() {
+    var submit = $('#last-pay');
+    var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
+    var all_select = $('.select_con');
+    for(var i = 0; i<all_select.length; i++){
+        (function (i) {
+            all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
+                if(pay_all.innerHTML.substr(1) == "0"){
+                    submit.style.backgroundColor = '#B0B0B0';
+                }else{
+                    submit.style.backgroundColor = '#f40';
+                }
+            })
+        })(i);
+    }
+    submit.addEventListener('mouseover',function () {
+        c(pay_all.innerHTML);
+        if(pay_all.innerHTML.substr(1) == "0"){
+            submit.style.backgroundColor = '#B0B0B0';
+            submit.style.cssText = "cursor:not-allowed;"
+        }else{
+            submit.style.cssText = "cursor:pointer;"
+            submit.style.backgroundColor = '#f40';
+        }
+
+    })
 }
 /**
  * 增减商品数量，同时计算最终所选商品数量之和search_number,计算应付总额calculat_all_pay
@@ -301,4 +336,5 @@ window.onload = function () {
     number_inc_dec();
     g_delete();
     all_check();
+    submit_bg();
 };
