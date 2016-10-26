@@ -53,6 +53,7 @@ li{
 }
 .select input{
     background-color: transparent;
+    cursor:pointer;
 }
 .item-shop-name{
     text-align: left;
@@ -63,7 +64,7 @@ li{
     overflow: hidden;
 }
 .store-in-list li{
-    background: #fcfcfc;
+    background: #FCFCFC;
     margin:20px 0;
     height:120px;
     overflow: hidden;

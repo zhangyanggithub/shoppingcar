@@ -213,17 +213,18 @@ function number_inc_dec() {
                 calculat_all_pay(g_list);
             });
         })(i);
-
     }
-
 }
 function calculat_all_pay(arr) {
     var pay_ele = $('#g-pay-all').getElementsByTagName('span')[0];
     var sum = 0;
     for(var j = 0; j<arr.length; j++){
         if(arr[j].getElementsByTagName('input')[0].checked){
+            bg_change(arr[j].parentNode,'#FFF8E1');
             var j_price = parseInt(arr[j].parentNode.getElementsByClassName('item-sum-price')[0].innerHTML.substr(1));
             sum += j_price;
+        }else{
+            bg_change(arr[j].parentNode,'#FCFCFC');
         }
     }
     pay_ele.innerHTML = '￥'+sum;
@@ -268,16 +269,24 @@ function search_number(arr) {
     var selected_sum = 0;
     for(var p = 0; p<arr.length; p++){
         if(arr[p].getElementsByTagName('input')[0].checked) {
+            bg_change(arr[p].parentNode,'#FFF8E1');
             //商品行对应的商品件数
             var every_sum = parseInt(arr[p].parentNode.getElementsByClassName('every-sum')[0].value);
             selected_sum += every_sum;
+        }else{
+            bg_change(arr[p].parentNode,'#FCFCFC');
         }
     }
     var last_show = $('#g-selected').getElementsByTagName('span')[0];
     last_show.innerHTML = selected_sum;
 }
-select();
-show_price();
-number_inc_dec();
-g_delete();
-all_check();
+function bg_change(ele,color){
+    ele.style.backgroundColor = color;
+}
+window.onload = function () {
+    select();
+    show_price();
+    number_inc_dec();
+    g_delete();
+    all_check();
+};
