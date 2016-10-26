@@ -77,13 +77,11 @@ function select() {
                     selet_all(1,shop_list_in_name[father_input]);
                 }
             });
-
             for(var r = 0; r<shop_list_in_name[father_input].length; r++){
                 /**
                  * flag[r] = true表示此checkbox被选中
                  * @type {boolean}
                  */
-
                 (function (r) {
                     var shop_li = shop_list_in_name[father_input][r].getElementsByTagName('input')[0];
                     //监听每个商店的选中状态
@@ -126,10 +124,7 @@ function select() {
                     });
                 })(r);
             }
-
-
         })(father_input);
-
     }
     //所有input为checkbox的元素所在的div
     var all_select = $('.select_con');
@@ -173,7 +168,23 @@ function g_delete() {
     }
 }
 /**
- * 增减商品数量
+ * 监听所有checkbox，计算总pay和总number
+ */
+function all_check() {
+    var all_select = $('.select_con');
+    var g_list = $('.item-checkbox');
+    for(var s = 0; s<all_select.length;s++){
+        (function (s) {
+            all_select[s].getElementsByTagName('input')[0].addEventListener('change',function () {
+                search_number(g_list);
+                calculat_all_pay(g_list);
+            });
+        })(s);
+    }
+
+}
+/**
+ * 增减商品数量，同时计算最终所选商品数量之和search_number,计算应付总额calculat_all_pay
  */
 function number_inc_dec() {
     var g_list = $('.item-checkbox');
@@ -189,6 +200,8 @@ function number_inc_dec() {
             increase.addEventListener('click',function () {
                 value.value = parseInt(value.value)+1;
                 sum_price.innerHTML = '￥'+value.value*per_price;
+                search_number(g_list);
+                calculat_all_pay(g_list);
             });
             decrease.addEventListener('click',function () {
                 value.value = parseInt(value.value)-1;
@@ -196,14 +209,27 @@ function number_inc_dec() {
                     value.value = 0;
                 }
                 sum_price.innerHTML = '￥'+value.value*per_price;
+                search_number(g_list);
+                calculat_all_pay(g_list);
             });
         })(i);
 
     }
 
 }
+function calculat_all_pay(arr) {
+    var pay_ele = $('#g-pay-all').getElementsByTagName('span')[0];
+    var sum = 0;
+    for(var j = 0; j<arr.length; j++){
+        if(arr[j].getElementsByTagName('input')[0].checked){
+            var j_price = parseInt(arr[j].parentNode.getElementsByClassName('item-sum-price')[0].innerHTML.substr(1));
+            sum += j_price;
+        }
+    }
+    pay_ele.innerHTML = '￥'+sum;
+}
 /**
- * 价格总额计算
+ * 价格总额计算，这里监听每个商品是否被选中计算总价格和所有商品选到的总数
  */
 function show_price() {
     var g_list = $('.item-checkbox');
@@ -211,15 +237,7 @@ function show_price() {
     for(var i = 0; i<all_select.length; i++){
         (function (i) {
             all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
-                var pay_ele = $('#g-pay-all').getElementsByTagName('span')[0];
-                var sum = 0;
-                for(var j = 0; j<g_list.length; j++){
-                    if(g_list[j].getElementsByTagName('input')[0].checked){
-                        var j_price = parseInt(g_list[j].parentNode.getElementsByClassName('item-sum-price')[0].innerHTML.substr(1));
-                        sum += j_price;
-                    }
-                }
-                pay_ele.innerHTML = '￥'+sum;
+                calculat_all_pay(g_list);
             })
         })(i);
     }
@@ -242,33 +260,24 @@ function selet_all(flag,arr) {
 
 
 }
-function g_num_show() {
-    //所有可选按钮
-    var all_select = $('.select_con');
-    //所有商品按钮
-    var g_list = $('.item-checkbox');
-    for(var t = 0;t<all_select.length; t++){
-        (function (t) {
-            all_select[t].addEventListener('change',function () {
-                var selected_sum = 0;
-                for(var p = 0; p<g_list.length; p++){
-                    if(g_list[p].getElementsByTagName('input').checked) {
-                        //商品行对应的商品件数
-                        var every_sum = parseInt(g_list[p].parentNode.getElementsByClassName('every-sum').value);
-                        c(every_sum);
-                        selected_sum += every_sum;
-                        c(selected_sum);
-
-                    }
-                }
-                var last_show = $('#g-selected').getElementsByTagName('span');
-                last_show.innerHTML = selected_sum;
-            })
-        })(t);
+/**
+ * 统计所有商品所在的li中商品所选数量之和
+ * @param arr所有商品所在的li
+ */
+function search_number(arr) {
+    var selected_sum = 0;
+    for(var p = 0; p<arr.length; p++){
+        if(arr[p].getElementsByTagName('input')[0].checked) {
+            //商品行对应的商品件数
+            var every_sum = parseInt(arr[p].parentNode.getElementsByClassName('every-sum')[0].value);
+            selected_sum += every_sum;
+        }
     }
+    var last_show = $('#g-selected').getElementsByTagName('span')[0];
+    last_show.innerHTML = selected_sum;
 }
 select();
 show_price();
 number_inc_dec();
 g_delete();
-g_num_show();
+all_check();
