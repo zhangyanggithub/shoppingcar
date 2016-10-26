@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shoppingCar</title>
+    <link rel="shortcut Icon" href=images/heben.jpg>
+    <link rel="stylesheet" href="shopcar.css">
+</head>
+<body>
+<div id="shopping-car">
+    <div id="car-menu">
+        <div id="select-all-box" class="select fl select-all-input select_con">
+            <input type="checkbox">全选
+        </div>
+        <div id="m-menu" class="g-show fl">商品</div>
+        <div id="m-infor" class="g-infor fl">商品信息</div>
+        <div id="m-price" class="g-price fl">单价</div>
+        <div id="m-number" class="g-number fl">数量</div>
+        <div id="m-sum-price" class="g-sum-price fl">金额</div>
+        <div id="m-handle" class="g-handle fl">操作</div>
+    </div>
+    <ul class="g-car-content">
+        <li class="g-item">
+            <div id="name0" class="item-shop-name select select_con">
+                <input type="checkbox">店铺：相机
+            </div>
+            <ul class="store-in-list">
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/1.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl" style="color: #9c9c9c;">
+                        <div class="g-color">颜色分类：红色</div>
+                        <div class="g-size">尺码：M</div>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/2.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl">
+                        <p class="g-color">颜色分类：红色</p>
+                        <p class="g-size">尺码：M</p>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1" min="1" id="a">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/3.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl">
+                        <p class="g-color">颜色分类：红色</p>
+                        <p class="g-size">尺码：M</p>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1" min="1">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </li>
+        <li class="g-item">
+            <div id="name1" class="item-shop-name select select_con">
+                <input type="checkbox">店铺：花朵
+            </div>
+            <ul class="store-in-list">
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/4.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl">
+                        <p class="g-color">颜色分类：红色</p>
+                        <p class="g-size">尺码：M</p>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/5.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl">
+                        <p class="g-color">颜色分类：红色</p>
+                        <p class="g-size">尺码：M</p>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-checkbox select select_con fl">
+                        <input type="checkbox" class="checkbox">
+                    </div>
+                    <!--图片和描述-->
+                    <div class="item-show g-show fl">
+                        <img src="images/6.jpg" class="fl">
+                        <div class="g-show-infor">
+                            <a href="#">这里可以有特价包邮之类的信息这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息 这里可以有特价包邮之类的信息</a>
+                        </div>
+                    </div>
+                    <!--商品信息描述-->
+                    <div class="item-g-infor  g-infor fl">
+                        <p class="g-color">颜色分类：红色</p>
+                        <p class="g-size">尺码：M</p>
+                    </div>
+                    <!--价格-->
+                    <div class="item-price g-price  fl">￥100.00</div>
+                    <!--数量-->
+                    <div class="item-number g-number  fl">
+                        <div class="detail-number">
+                            <a href="#" class="decrease">-</a>
+                            <input type="text" class="every-sum" value="1">
+                            <a href="#" class="increase">+</a>
+                        </div>
+                    </div>
+                    <!--金额-->
+                    <div class="item-sum-price g-sum-price  fl">￥1000</div>
+                    <!--操作-->
+                    <div class="fl item-handle g-handle">
+                        <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
+                            <a href="#">移入收藏夹</a>
+                        </div>
+                        <div class="item-delete"  style="height: 25px;line-height: 25px">
+                            <a href="#">删除</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </li>
+        <div id="pay">
+            <ul>
+                <li class="select-all-input can-select select_con">
+                    <input type="checkbox">全选
+                </li>
+                <li><a href="#">删除</a></li>
+                <li><a href="#">清除失效宝贝</a></li>
+                <li><a href="#">移入收藏夹</a></li>
+                <li><a href="#">分享</a></li>
+            </ul>
+            <div id="last-pay" class="g-pay-list">结算</div>
+            <div id="g-pay-all" class="g-pay-list">合计(不包括运费):<span>￥0</span></div>
+            <div id="g-selected" class="g-pay-list">
+                已选商品<span>0件</span>
+                <div id="show-selected"><a href="#">+</a></div>
+            </div>
+        </div>
+    </ul>
+</div>
+<script src="shopping-car.js"></script>
+</body>
+</html>
