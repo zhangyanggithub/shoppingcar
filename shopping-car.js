@@ -152,19 +152,26 @@ function g_delete() {
         (function (i) {
             var delete_btn = g_list[i].parentNode.getElementsByClassName('item-delete')[0];
             delete_btn.addEventListener('click', function () {
-                //商店名称
-                var p_name = get_pre(this.parentNode.parentNode.parentNode);
-                //具体商品li的pre和nxt
-                var p = get_pre(this.parentNode.parentNode);
-                var n = get_nxt(this.parentNode.parentNode);
-                if (confirm('确定要删除此商品吗?')) {
-                    this.parentNode.parentNode.remove(this.parentNode);
-                }
-                if (p.nodeType == 3 && n.nodeType == 3) {
-                    p_name.parentNode.remove(p_name);
-                }
+                delete_detail(this.parentNode);
             });
         })(i);
+    }
+}
+/**
+ * 具体删除步骤
+ * @param ele 要删除的行内的“删除”所在的div的父元素
+ */
+function delete_detail(ele){
+//商店名称
+    var p_name = get_pre(ele.parentNode.parentNode);
+    //具体商品li的pre和nxt
+    var p = get_pre(ele.parentNode);
+    var n = get_nxt(ele.parentNode);
+    if (confirm('确定要删除此商品吗?')) {
+        ele.parentNode.remove(ele);
+    }
+    if (p.nodeType == 3 && n.nodeType == 3) {
+        p_name.parentNode.remove(p_name);
     }
 }
 /**
@@ -186,16 +193,9 @@ function all_check() {
 function change_hook_bg(arr) {
     for(var p = 0; p<arr.length; p++){
         var tmp = arr[p].getElementsByTagName('input')[0];
-      /*  var submit = $('#last-pay');
-        var pay_all = $('#g-pay-all');*/
+
         if(tmp.checked) {
             arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: url(images/red_right.png) no-repeat -4px;';
-           /*c(pay_all.innerHTML.substr(1));
-            if(pay_all.innerHTML.substr(1) == "0"){
-               submit.style.backgroundColor = '#B0B0B0';
-           }else{
-               submit.style.backgroundColor = '#f40';
-           }*/
         }else{
             arr[p].getElementsByClassName('out-input')[0].style.cssText = 'background: none';
         }
@@ -217,7 +217,6 @@ function submit_bg() {
         })(i);
     }
     submit.addEventListener('mouseover',function () {
-        c(pay_all.innerHTML);
         if(pay_all.innerHTML.substr(1) == "0"){
             submit.style.backgroundColor = '#B0B0B0';
             submit.style.cssText = "cursor:not-allowed;"

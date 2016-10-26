@@ -8,14 +8,13 @@
 </head>
 <body>
 <div id="shopping-car">
-    <div id="car-menu">
-        <div id="select-all-box" class="select fl select-all-input select_con">
-            <div class="out-input">
-                <input type="checkbox">
-            </div>
-            <div class="all">全选</div>
+    <div id="select-all-box" class="select fl select-all-input select_con">
+        <div class="out-input">
+            <input type="checkbox">
         </div>
-        <div id="m-menu" class="g-show fl">商品</div>
+        <div class="all">全选</div>
+    </div>
+    <div id="car-menu">
         <div id="m-infor" class="g-infor fl">商品信息</div>
         <div id="m-price" class="g-price fl">单价</div>
         <div id="m-number" class="g-number fl">数量</div>
@@ -29,7 +28,7 @@
                     <input type="checkbox">
                 </div>
             </div>
-            <div class="shop-name">店铺：花朵</div>
+            <div class="shop-name">店铺：相机</div>
             <ul class="store-in-list">
                 <li>
                     <div class="item-checkbox select select_con fl">
@@ -62,7 +61,7 @@
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle1">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -95,14 +94,14 @@
                     <div class="item-number g-number  fl">
                         <div class="detail-number">
                             <a href="#" class="decrease">-</a>
-                            <input type="text" class="every-sum" value="1" min="1" id="a">
+                            <input type="text" class="every-sum" value="1" min="1">
                             <a href="#" class="increase">+</a>
                         </div>
                     </div>
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle2">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -135,14 +134,14 @@
                     <div class="item-number g-number  fl">
                         <div class="detail-number">
                             <a href="#" class="decrease">-</a>
-                            <input type="text" class="every-sum" value="1" min="1">
+                            <input type="text" class="every-sum" value="1">
                             <a href="#" class="increase">+</a>
                         </div>
                     </div>
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle3">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -193,7 +192,7 @@
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle4">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -226,14 +225,14 @@
                     <div class="item-number g-number  fl">
                         <div class="detail-number">
                             <a href="#" class="decrease">-</a>
-                            <input type="text" class="every-sum" value="1" min="1" id="a">
+                            <input type="text" class="every-sum" value="1">
                             <a href="#" class="increase">+</a>
                         </div>
                     </div>
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle5">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -266,14 +265,14 @@
                     <div class="item-number g-number  fl">
                         <div class="detail-number">
                             <a href="#" class="decrease">-</a>
-                            <input type="text" class="every-sum" value="1" min="1">
+                            <input type="text" class="every-sum" value="1">
                             <a href="#" class="increase">+</a>
                         </div>
                     </div>
                     <!--金额-->
                     <div class="item-sum-price g-sum-price  fl">￥1000</div>
                     <!--操作-->
-                    <div class="fl item-handle g-handle">
+                    <div class="fl item-handle g-handle" id="handle6">
                         <div class="item-favourite" style="height: 25px;line-height: 25px;margin-top: 20px">
                             <a href="#">移入收藏夹</a>
                         </div>
@@ -291,8 +290,9 @@
         <ul>
             <li class="select-all-input can-select select_con">
                 <div class="out-input">
-                    <input type="checkbox">全选
+                    <input type="checkbox">
                 </div>
+                <div class="all-last">全选</div>
             </li>
             <li><a href="#">删除</a></li>
             <li><a href="#">清除失效宝贝</a></li>

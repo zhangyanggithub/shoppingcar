@@ -16,18 +16,26 @@ input[type=checkbox]{
 #shopping-car{
     width:1188px;
     height:auto;
-    margin:0 auto;
+    margin:20px auto;
     font-size: 12px;
     position: relative;
 }
 #select-all-box{
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
 }
 #select-all-box .out-input{
     position: absolute;
-    top: 4px;
-    left: 1px;
+    top: 0;
+    left: 0;
 
+}
+.all{
+    position: absolute;
+    top: -18px;
+    left: 20px;
 }
 li{
     list-style-type: none;
@@ -50,6 +58,8 @@ li{
 }
 #car-menu{
     height:50px;
+    margin-left: 391px;
+    height: 39px;
 }
 .select{
     width:50px;
@@ -204,12 +214,12 @@ li{
     line-height: 25px;
 }
 #pay{
-    width: 1185px;
+    width: 1188px;
     height: 50px;
     margin-bottom: 100px;
     position: fixed;
     top: 752px;
-    left: 201px;
+    left: 198px;
     z-index: 2;
     background-color: #e9eeff;
 }
@@ -274,5 +284,9 @@ li{
     height:10px;
     padding: 0px 5px;
 }
-
+#pay .all-last{
+    position: absolute;
+    top: -4px;
+    left: 34px;
+}
 
