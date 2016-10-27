@@ -173,15 +173,36 @@ function select() {
         })(i);
     }
 }
-function select_father() {
+function select_father(){
+    var g_list = $('.item-checkbox');
+    for (var i = 0; i < g_list.length; i++) {
+        (function (i) {
+            g_list[i].getElementsByTagName('input')[0].addEventListener('click', function () {
+                s_f(get_pre(get_pre(g_list[i].parentNode.parentNode)));
+            });
+        })(i);
+    }
+}
+/*function select_father() {
+   /!* var g_list = $('.item-checkbox');
+    for (var i = 0; i < g_list.length; i++) {
+        (function (i) {
+            g_list[i].getElementsByTagName('input')[0].addEventListener('change', function () {
+                alert('')
+                // var father = get_pre(get_pre(g_list[i].parentNode)).getElementsByTagName('input')[0];
+            });
+        })(i);
+
+    }
+
+*!/
     for(var father_input in shop_list_in_name){
-        var in_input = $('#'+father_input).getElementsByTagName('input')[0];
         (function (father_input) {
             for(var r = 0; r<shop_list_in_name[father_input].length; r++){
-                /**
+                /!**
                  * flag[r] = true表示此checkbox被选中
                  * @type {boolean}
-                 */
+                 *!/
                 (function (r) {
                     var shop_li = shop_list_in_name[father_input][r].getElementsByTagName('input')[0];
                     //监听每个商店的选中状态
@@ -210,6 +231,8 @@ function select_father() {
                                 flag3 = 0;//存在未被选中元素
                             }
                         }
+                        c('flag2'+flag2);
+                        c('flag3'+flag3);
                         var parent = get_pre(get_pre(shop_list_in_name[father_input][r].parentNode));
                         if(!flag2){
                             parent.getElementsByTagName('input')[0].checked = 0;
@@ -226,6 +249,30 @@ function select_father() {
             }
         })(father_input);
     }
+}*/
+/**
+ * 
+ * @param lead 包含商店name的父元素的父元素
+ */
+function s_f(lead) {
+    var all_select = $('.select_con');
+    var sum = 0;
+    var li = get_nxt(get_nxt(lead)).childNodes;
+    var length = 0;
+    for(var i = 0; i<li.length; i++){
+       if(li[i].nodeType != 3){
+           length++;
+           if(li[i].getElementsByClassName('out-input')[0].getElementsByTagName('input')[0].checked){
+               sum++;
+           }
+       }
+    }
+    if(sum == length){
+        lead.getElementsByTagName('input')[0].checked = 1;
+    }else{
+        lead.getElementsByTagName('input')[0].checked = 0;
+    }
+    change_hook_bg(all_select);
 }
 /**
  * 删除商品 未添加恢复功能
@@ -270,6 +317,7 @@ function all_check() {
                 change_hook_bg(all_select);
                 search_number(g_list);
                 calculat_all_pay(g_list);
+                c('ing');
             });
         })(s);
     }
@@ -426,8 +474,8 @@ function cancel_choose() {
                                 change_hook_bg(all_select);
                                 search_number(g_list);
                                 calculat_all_pay(g_list);
-                                select_father();
                                 this.parentNode.parentNode.removeChild(this.parentNode);
+                                s_f(get_pre(get_pre($('#'+index).parentNode)));
                             })
                         })(i);
                     }
