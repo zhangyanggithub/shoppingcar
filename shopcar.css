@@ -298,9 +298,10 @@ li{
     left: 34px;
 }
 #show-pic{
+    display:none;
     position: absolute;
     width: 1186px;
-    min-height: 150px;
+    min-height: 100px;
     overflow: hidden;
     bottom: 48px;
     left: 0px;
@@ -311,7 +312,6 @@ li{
     position: absolute;
     top: 5px;
     left: 72px;
-    margin: 5px 2px;
     width: 83px;
     height: 83px;
     display: inline-block;
@@ -337,10 +337,26 @@ li{
     display: block;
 }
 #little-triangle{
+    display: none;
     position: absolute;
     top: 1px;
     right: 60px;
     border: 8px solid;
     border-color: #FFF transparent transparent transparent;
-
+}
+#scroll_left_icon{
+    left: 35px;
+    top: 36px;
+}
+.scroll_icon{
+    cursor:pointer;
+    width: 12px;
+    height: 24px;
+    position: absolute;
+    background: transparent url("images/all_bg.png") no-repeat -18px -24px;
+}
+#scroll_right_icon{
+    right: 35px;
+    top: 36px;
+    transform: rotate(180deg);
 }

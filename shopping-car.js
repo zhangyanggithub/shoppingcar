@@ -329,6 +329,10 @@ function search_number(arr) {
 function bg_change(ele,color){
     ele.style.backgroundColor = color;
 }
+/**
+ * 删除图片进而取消对商品的选择
+ * @param ele
+ */
 function delete_pic(ele) {
     var pic_delete = $('.pic-delete');
     for(var i = 0; i<pic_delete.length; i++){
@@ -340,7 +344,46 @@ function delete_pic(ele) {
         })(i);
     }
 }
+/**
+ * 选择商品后展示其图片
+ */
+function add_pic() {
+    var show_pic_tmp = '<div class="pic-item" index="{sequence}"><img src="{src}"><div class="pic-delete">取消选择</div></div>';
+    var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
+    var show_btn = $('#show-selected');
+    var triangle = $('#little-triangle');
+    var show_pic = $('#show-pic');
+    var g_list = $('.item-checkbox');
+    var left_icon = '<div id="scroll_left_icon" class="scroll_icon"></div>';
+    var right_icon = '<div id="scroll_right_icon"  class="scroll_icon"></div>';
+    var _pic_html = [];
+    _pic_html.push(left_icon);
+    show_btn.addEventListener('click',function () {
+        if(pay_all.innerHTML != '￥0'){
+            show_pic.style.display = triangle.style.display ='block';
+            for(var j = 0; j<g_list.length; j++){
+                if(g_list[j].getElementsByTagName('input')[0].checked){
+                    var li_id = g_list[j].parentNode.id;
+                    var image = g_list[j].parentNode.getElementsByClassName('item-show')[0].getElementsByTagName('img')[0];
+                    var new_tmp = show_pic_tmp
+                        .replace(/\{sequence\}/g,li_id)
+                        .replace(/\{src\}/g,image.src);
+                    _pic_html.push(new_tmp);
+                }
+            }
+            _pic_html.push(right_icon);
+            show_pic.innerHTML = _pic_html.join('');
+            var pic_item = $('.pic-item');
+            for(var t = 0; t<pic_item.length; t++){
+                c(pic_item[t]);
+                pic_item[t].style.left = 80 + t*104 + 'px';
+            }
+        }
 
+    });
+
+
+}
 window.onload = function () {
     select();
     show_price();
@@ -348,4 +391,5 @@ window.onload = function () {
     g_delete();
     all_check();
     submit_bg();
+    add_pic();
 };
