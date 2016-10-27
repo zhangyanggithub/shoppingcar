@@ -42,6 +42,9 @@ function get_nxt(ele) {
     }
     return element;
 }
+/**
+ * 选中商品后看是否选中其父子元
+ */
 function select() {
     var select_all = $('.select-all-input');
     //获取商店list所在行
@@ -142,6 +145,42 @@ function select() {
             });
         })(f);
     }
+    /**
+     * 若商品被一一选中，则选中两个全选input
+     */
+    var g_list = $('.item-checkbox');
+    for (var i = 0; i < all_select.length; i++) {
+        all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
+            var sum = 0;
+            for (var p = 0; p < g_list.length; p++) {
+                if(g_list[p].getElementsByTagName('input')[0].checked){
+                    sum++;
+                }
+            }
+            if(sum == g_list.length){
+                for(var t = 0; t<select_all.length; t++){
+                    select_all[t].getElementsByTagName('input')[0].checked = 1;
+                }
+            }else{
+                for(var t = 0; t<select_all.length; t++){
+                    select_all[t].getElementsByTagName('input')[0].checked = 0;
+                }
+            }
+        });
+       /* var flag_0 = [];//未选中
+        var flag_1 = [];//选中
+        (function (i) {
+            for (var p = 0; p < g_list.length; p++) {
+                flag_0[p] = 0;
+                flag_1[p] = 1;
+            }
+
+            var delete_btn = g_list[i].parentNode.getElementsByClassName('item-delete')[0];
+            delete_btn.addEventListener('click', function () {
+                delete_detail(this.parentNode);
+            });
+        })(i);*/
+    }
 }
 /**
  * 删除商品 未添加恢复功能
@@ -190,6 +229,10 @@ function all_check() {
         })(s);
     }
 }
+/**
+ * 改变input的背景图片
+ * @param arr所有商品所在的list
+ */
 function change_hook_bg(arr) {
     for(var p = 0; p<arr.length; p++){
         var tmp = arr[p].getElementsByTagName('input')[0];
@@ -333,51 +376,78 @@ function bg_change(ele,color){
  * 删除图片进而取消对商品的选择
  * @param ele
  */
-function delete_pic(ele) {
-    var pic_delete = $('.pic-delete');
-    for(var i = 0; i<pic_delete.length; i++){
-        (function (i) {
-            pic_delete[i].addEventListener('click',function () {
-                var id = this.id;
-                
-            })
-        })(i);
+function cancel_choose() {
+    var all_select = $('.select_con');
+    var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
+    for(var j = 0; j<all_select.length; j++){
+        (function (j) {
+            all_select[j].addEventListener('change',function () {
+                if(pay_all.innerHTML != '￥0'){
+                    var pic_delete = $('.pic-delete');
+                    c('pic_delete.length'+pic_delete.length);
+                    for(var i = 0; i<pic_delete.length; i++){
+                        (function (i) {
+                            pic_delete[i].addEventListener('click',function () {
+                                alert('dianjishanchu');
+                                var index = this.parentNode.getAttribute('index');
+                                c('index'+index);
+                                var li = $('#'+index).getElementsByClassName('out-input')[0].getElementsByTagName('input')[0];
+                                li.checked = 0;
+                                this.parentNode.parentNode.remove(this.parentNode);
+                            })
+                        })(i);
+                    }
+                }
+            });
+        })(j);
     }
 }
 /**
- * 选择商品后展示其图片
+ * 商品被选中后将图片添加到pay中的加号内
  */
 function add_pic() {
+    var all_select = $('.select_con');
+    var g_list = $('.item-checkbox');
+    var show_pic = $('#show-pic');
     var show_pic_tmp = '<div class="pic-item" index="{sequence}"><img src="{src}"><div class="pic-delete">取消选择</div></div>';
+    var _pic_html = [];
+    var left_icon = '<div id="scroll_left_icon" class="scroll_icon"></div>';
+    var right_icon = '<div id="scroll_right_icon"  class="scroll_icon"></div>';
+    _pic_html.push(left_icon);
+    for(var j = 0; j<all_select.length; j++) {
+        (function (j) {
+            all_select[j].addEventListener('change', function () {
+                for (var j = 0; j < g_list.length; j++) {
+                    if (g_list[j].getElementsByTagName('input')[0].checked) {
+                        var li_id = g_list[j].parentNode.id;
+                        var image = g_list[j].parentNode.getElementsByClassName('item-show')[0].getElementsByTagName('img')[0];
+                        var new_tmp = show_pic_tmp
+                            .replace(/\{sequence\}/g, li_id)
+                            .replace(/\{src\}/g, image.src);
+                        _pic_html.push(new_tmp);
+                    }
+                }
+                _pic_html.push(right_icon);
+                show_pic.innerHTML = _pic_html.join('');
+                var pic_item = $('.pic-item');
+                for (var t = 0; t < pic_item.length; t++) {
+                    pic_item[t].style.left = 80 + t * 104 + 'px';
+                }
+            });
+        })(j);
+    }
+}
+/**
+ * 点击加号后展示其图片
+ */
+function show_pic() {
     var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
     var show_btn = $('#show-selected');
     var triangle = $('#little-triangle');
     var show_pic = $('#show-pic');
-    var g_list = $('.item-checkbox');
-    var left_icon = '<div id="scroll_left_icon" class="scroll_icon"></div>';
-    var right_icon = '<div id="scroll_right_icon"  class="scroll_icon"></div>';
-    var _pic_html = [];
-    _pic_html.push(left_icon);
     show_btn.addEventListener('click',function () {
         if(pay_all.innerHTML != '￥0'){
             show_pic.style.display = triangle.style.display ='block';
-            for(var j = 0; j<g_list.length; j++){
-                if(g_list[j].getElementsByTagName('input')[0].checked){
-                    var li_id = g_list[j].parentNode.id;
-                    var image = g_list[j].parentNode.getElementsByClassName('item-show')[0].getElementsByTagName('img')[0];
-                    var new_tmp = show_pic_tmp
-                        .replace(/\{sequence\}/g,li_id)
-                        .replace(/\{src\}/g,image.src);
-                    _pic_html.push(new_tmp);
-                }
-            }
-            _pic_html.push(right_icon);
-            show_pic.innerHTML = _pic_html.join('');
-            var pic_item = $('.pic-item');
-            for(var t = 0; t<pic_item.length; t++){
-                c(pic_item[t]);
-                pic_item[t].style.left = 80 + t*104 + 'px';
-            }
         }
 
     });
@@ -392,4 +462,6 @@ window.onload = function () {
     all_check();
     submit_bg();
     add_pic();
+    show_pic();
+    cancel_choose();
 };

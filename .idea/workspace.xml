@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/shopping-car.js" line="144" />
-    <bookmark url="file://$PROJECT_DIR$/shopping-car.js" line="224" />
+    <bookmark url="file://$PROJECT_DIR$/shopping-car.js" line="183" />
+    <bookmark url="file://$PROJECT_DIR$/shopping-car.js" line="267" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e02e5a1d-8062-4569-bd19-fa0f52f63289" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/all_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopcar.css" afterPath="$PROJECT_DIR$/shopcar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopping-car.js" afterPath="$PROJECT_DIR$/shopping-car.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingCar.html" afterPath="$PROJECT_DIR$/shoppingCar.html" />
     </list>
     <ignored path="shoppingcar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shopcar.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shopcar.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shopcar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
+            <state relative-caret-position="309">
+              <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -44,8 +41,8 @@
       <file leaf-file-name="shoppingCar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shoppingCar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="580" column="25" selection-start-line="580" selection-start-column="25" selection-end-line="580" selection-end-column="25" />
+            <state relative-caret-position="165">
+              <caret line="496" column="45" selection-start-line="496" selection-start-column="36" selection-end-line="496" selection-end-column="45" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -87,28 +84,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shopping-car.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="378" column="51" selection-start-line="378" selection-start-column="51" selection-end-line="378" selection-end-column="51" />
+            <state relative-caret-position="-252">
+              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
               <folding>
                 <element signature="n#!!doc;n#$#0" expanded="false" />
                 <element signature="n#!!block;n#$#0" expanded="false" />
                 <element signature="n#!!block;n#c#0" expanded="false" />
                 <element signature="n#!!block;n#get_pre#0" expanded="false" />
                 <element signature="n#!!block;n#get_nxt#0" expanded="false" />
+                <element signature="n#!!doc;n#select#0" expanded="false" />
                 <element signature="n#!!block;n#select#0" expanded="false" />
-                <element signature="e#1152#1755#0" expanded="false" />
-                <element signature="e#4547#4570#0" expanded="false" />
-                <element signature="e#4614#4940#0" expanded="false" />
+                <element signature="e#1178#1781#0" expanded="false" />
+                <element signature="e#2037#2259#0" expanded="false" />
+                <element signature="e#2335#4465#0" expanded="false" />
+                <element signature="e#2490#4446#0" expanded="false" />
+                <element signature="e#4573#4596#0" expanded="false" />
+                <element signature="e#4640#4966#0" expanded="false" />
                 <element signature="n#!!doc;n#g_delete#0" expanded="false" />
                 <element signature="n#!!block;n#g_delete#0" expanded="false" />
                 <element signature="n#!!doc;n#delete_detail#0" expanded="false" />
                 <element signature="n#!!block;n#delete_detail#0" expanded="false" />
                 <element signature="n#!!doc;n#all_check#0" expanded="false" />
                 <element signature="n#!!block;n#all_check#0" expanded="false" />
-                <element signature="e#6287#6630#0" expanded="false" />
+                <element signature="n#!!doc;n#change_hook_bg#0" expanded="false" />
+                <element signature="n#!!block;n#change_hook_bg#0" expanded="false" />
+                <element signature="e#7653#7996#0" expanded="false" />
                 <element signature="n#!!block;n#submit_bg#0" expanded="false" />
                 <element signature="n#!!doc;n#number_inc_dec#0" expanded="false" />
                 <element signature="n#!!block;n#number_inc_dec#0" expanded="false" />
@@ -120,8 +123,12 @@
                 <element signature="n#!!doc;n#search_number#0" expanded="false" />
                 <element signature="n#!!block;n#search_number#0" expanded="false" />
                 <element signature="n#!!block;n#bg_change#0" expanded="false" />
-                <element signature="n#!!doc;n#delete_pic#0" expanded="false" />
-                <element signature="n#!!block;n#delete_pic#0" expanded="false" />
+                <element signature="n#!!doc;n#cancel_choose#0" expanded="false" />
+                <element signature="n#!!doc;n#add_pic#0" expanded="false" />
+                <element signature="n#!!block;n#add_pic#0" expanded="false" />
+                <element signature="n#!!doc;n#show_pic#0" expanded="false" />
+                <element signature="n#!!block;n#show_pic#0" expanded="false" />
+                <marker date="1477551273669" expanded="false" signature="12603:13782" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -143,8 +150,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/shoppingCar.html" />
-        <option value="$PROJECT_DIR$/shopping-car.js" />
         <option value="$PROJECT_DIR$/shopcar.css" />
+        <option value="$PROJECT_DIR$/shopping-car.js" />
       </list>
     </option>
   </component>
@@ -310,12 +317,12 @@
       <workItem from="1477299112638" duration="7378000" />
       <workItem from="1477354138958" duration="33760000" />
       <workItem from="1477440474929" duration="29439000" />
-      <workItem from="1477526500740" duration="9581000" />
+      <workItem from="1477526500740" duration="14701000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80158000" />
+    <option name="totallyTimeSpent" value="85278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -345,7 +352,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -412,17 +419,23 @@
             <element signature="n#!!block;n#c#0" expanded="false" />
             <element signature="n#!!block;n#get_pre#0" expanded="false" />
             <element signature="n#!!block;n#get_nxt#0" expanded="false" />
+            <element signature="n#!!doc;n#select#0" expanded="false" />
             <element signature="n#!!block;n#select#0" expanded="false" />
-            <element signature="e#1152#1755#0" expanded="false" />
-            <element signature="e#4547#4570#0" expanded="false" />
-            <element signature="e#4614#4940#0" expanded="false" />
+            <element signature="e#1178#1781#0" expanded="false" />
+            <element signature="e#2037#2259#0" expanded="false" />
+            <element signature="e#2335#4465#0" expanded="false" />
+            <element signature="e#2490#4446#0" expanded="false" />
+            <element signature="e#4573#4596#0" expanded="false" />
+            <element signature="e#4640#4966#0" expanded="false" />
             <element signature="n#!!doc;n#g_delete#0" expanded="false" />
             <element signature="n#!!block;n#g_delete#0" expanded="false" />
             <element signature="n#!!doc;n#delete_detail#0" expanded="false" />
             <element signature="n#!!block;n#delete_detail#0" expanded="false" />
             <element signature="n#!!doc;n#all_check#0" expanded="false" />
             <element signature="n#!!block;n#all_check#0" expanded="false" />
-            <element signature="e#6287#6630#0" expanded="false" />
+            <element signature="n#!!doc;n#change_hook_bg#0" expanded="false" />
+            <element signature="n#!!block;n#change_hook_bg#0" expanded="false" />
+            <element signature="e#7653#7996#0" expanded="false" />
             <element signature="n#!!block;n#submit_bg#0" expanded="false" />
             <element signature="n#!!doc;n#number_inc_dec#0" expanded="false" />
             <element signature="n#!!block;n#number_inc_dec#0" expanded="false" />
@@ -434,8 +447,12 @@
             <element signature="n#!!doc;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#bg_change#0" expanded="false" />
-            <element signature="n#!!doc;n#delete_pic#0" expanded="false" />
-            <element signature="n#!!block;n#delete_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#cancel_choose#0" expanded="false" />
+            <element signature="n#!!doc;n#add_pic#0" expanded="false" />
+            <element signature="n#!!block;n#add_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#show_pic#0" expanded="false" />
+            <element signature="n#!!block;n#show_pic#0" expanded="false" />
+            <marker date="1477551273669" expanded="false" signature="12603:13782" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -502,17 +519,23 @@
             <element signature="n#!!block;n#c#0" expanded="false" />
             <element signature="n#!!block;n#get_pre#0" expanded="false" />
             <element signature="n#!!block;n#get_nxt#0" expanded="false" />
+            <element signature="n#!!doc;n#select#0" expanded="false" />
             <element signature="n#!!block;n#select#0" expanded="false" />
-            <element signature="e#1152#1755#0" expanded="false" />
-            <element signature="e#4547#4570#0" expanded="false" />
-            <element signature="e#4614#4940#0" expanded="false" />
+            <element signature="e#1178#1781#0" expanded="false" />
+            <element signature="e#2037#2259#0" expanded="false" />
+            <element signature="e#2335#4465#0" expanded="false" />
+            <element signature="e#2490#4446#0" expanded="false" />
+            <element signature="e#4573#4596#0" expanded="false" />
+            <element signature="e#4640#4966#0" expanded="false" />
             <element signature="n#!!doc;n#g_delete#0" expanded="false" />
             <element signature="n#!!block;n#g_delete#0" expanded="false" />
             <element signature="n#!!doc;n#delete_detail#0" expanded="false" />
             <element signature="n#!!block;n#delete_detail#0" expanded="false" />
             <element signature="n#!!doc;n#all_check#0" expanded="false" />
             <element signature="n#!!block;n#all_check#0" expanded="false" />
-            <element signature="e#6287#6630#0" expanded="false" />
+            <element signature="n#!!doc;n#change_hook_bg#0" expanded="false" />
+            <element signature="n#!!block;n#change_hook_bg#0" expanded="false" />
+            <element signature="e#7653#7996#0" expanded="false" />
             <element signature="n#!!block;n#submit_bg#0" expanded="false" />
             <element signature="n#!!doc;n#number_inc_dec#0" expanded="false" />
             <element signature="n#!!block;n#number_inc_dec#0" expanded="false" />
@@ -524,8 +547,12 @@
             <element signature="n#!!doc;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#bg_change#0" expanded="false" />
-            <element signature="n#!!doc;n#delete_pic#0" expanded="false" />
-            <element signature="n#!!block;n#delete_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#cancel_choose#0" expanded="false" />
+            <element signature="n#!!doc;n#add_pic#0" expanded="false" />
+            <element signature="n#!!block;n#add_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#show_pic#0" expanded="false" />
+            <element signature="n#!!block;n#show_pic#0" expanded="false" />
+            <marker date="1477551273669" expanded="false" signature="12603:13782" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -622,10 +649,18 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/shopcar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="220" column="12" selection-start-line="220" selection-start-column="12" selection-end-line="220" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shoppingCar.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="580" column="25" selection-start-line="580" selection-start-column="25" selection-end-line="580" selection-end-column="25" />
+        <state relative-caret-position="165">
+          <caret line="496" column="45" selection-start-line="496" selection-start-column="36" selection-end-line="496" selection-end-column="45" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -668,25 +703,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shopping-car.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="378" column="51" selection-start-line="378" selection-start-column="51" selection-end-line="378" selection-end-column="51" />
+        <state relative-caret-position="-252">
+          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
           <folding>
             <element signature="n#!!doc;n#$#0" expanded="false" />
             <element signature="n#!!block;n#$#0" expanded="false" />
             <element signature="n#!!block;n#c#0" expanded="false" />
             <element signature="n#!!block;n#get_pre#0" expanded="false" />
             <element signature="n#!!block;n#get_nxt#0" expanded="false" />
+            <element signature="n#!!doc;n#select#0" expanded="false" />
             <element signature="n#!!block;n#select#0" expanded="false" />
-            <element signature="e#1152#1755#0" expanded="false" />
-            <element signature="e#4547#4570#0" expanded="false" />
-            <element signature="e#4614#4940#0" expanded="false" />
+            <element signature="e#1178#1781#0" expanded="false" />
+            <element signature="e#2037#2259#0" expanded="false" />
+            <element signature="e#2335#4465#0" expanded="false" />
+            <element signature="e#2490#4446#0" expanded="false" />
+            <element signature="e#4573#4596#0" expanded="false" />
+            <element signature="e#4640#4966#0" expanded="false" />
             <element signature="n#!!doc;n#g_delete#0" expanded="false" />
             <element signature="n#!!block;n#g_delete#0" expanded="false" />
             <element signature="n#!!doc;n#delete_detail#0" expanded="false" />
             <element signature="n#!!block;n#delete_detail#0" expanded="false" />
             <element signature="n#!!doc;n#all_check#0" expanded="false" />
             <element signature="n#!!block;n#all_check#0" expanded="false" />
-            <element signature="e#6287#6630#0" expanded="false" />
+            <element signature="n#!!doc;n#change_hook_bg#0" expanded="false" />
+            <element signature="n#!!block;n#change_hook_bg#0" expanded="false" />
+            <element signature="e#7653#7996#0" expanded="false" />
             <element signature="n#!!block;n#submit_bg#0" expanded="false" />
             <element signature="n#!!doc;n#number_inc_dec#0" expanded="false" />
             <element signature="n#!!block;n#number_inc_dec#0" expanded="false" />
@@ -698,17 +739,13 @@
             <element signature="n#!!doc;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#search_number#0" expanded="false" />
             <element signature="n#!!block;n#bg_change#0" expanded="false" />
-            <element signature="n#!!doc;n#delete_pic#0" expanded="false" />
-            <element signature="n#!!block;n#delete_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#cancel_choose#0" expanded="false" />
+            <element signature="n#!!doc;n#add_pic#0" expanded="false" />
+            <element signature="n#!!block;n#add_pic#0" expanded="false" />
+            <element signature="n#!!doc;n#show_pic#0" expanded="false" />
+            <element signature="n#!!block;n#show_pic#0" expanded="false" />
+            <marker date="1477551273669" expanded="false" signature="12603:13782" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shopcar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="351" column="18" selection-start-line="351" selection-start-column="18" selection-end-line="351" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
