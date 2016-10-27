@@ -344,23 +344,32 @@ li{
     display: none;
     position: absolute;
     top: 1px;
-    right: 60px;
+    right: 43px;
     border: 8px solid;
     border-color: #FFF transparent transparent transparent;
 }
-#scroll_left_icon{
+#scroll-left-icon{
     left: 35px;
     top: 36px;
 }
-.scroll_icon{
+.scroll-icon{
     cursor:pointer;
     width: 12px;
     height: 24px;
     position: absolute;
     background: transparent url("images/all_bg.png") no-repeat -18px -24px;
 }
-#scroll_right_icon{
+#scroll-right-icon{
     right: 35px;
     top: 36px;
     transform: rotate(180deg);
+}
+#close-icon{
+    cursor:pointer;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    background: transparent url("images/X.png") no-repeat;
 }

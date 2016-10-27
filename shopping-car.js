@@ -1,3 +1,4 @@
+var shop_list_in_name = {};
 /**
  * 通过类名或者id获取元素
  * @param ele元素名，包括# 或者 .
@@ -50,9 +51,9 @@ function select() {
     //获取商店list所在行
     var shop_select = $('.store-in-list');
     //商店名称下的所有input
-    var shop_list_in_name = {};
+    // var shop_list_in_name = {};
     for(var i = 0; i<shop_select.length; i++){
-        //商店名称
+        //商店名称所在行的input元素
         var shop_name;
         for(var p = 0;p<shop_select[i].parentNode.childNodes.length;p++){
             if(shop_select[i].parentNode.childNodes[p].nodeType != 3){
@@ -80,6 +81,102 @@ function select() {
                     selet_all(1,shop_list_in_name[father_input]);
                 }
             });
+            select_father();
+            /*for(var r = 0; r<shop_list_in_name[father_input].length; r++){
+                /!**
+                 * flag[r] = true表示此checkbox被选中
+                 * @type {boolean}
+                 *!/
+                (function (r) {
+                    var shop_li = shop_list_in_name[father_input][r].getElementsByTagName('input')[0];
+                    //监听每个商店的选中状态
+                    shop_li.addEventListener('change',function () {
+                        var flag = [];
+                        var flag1 = [];
+                        for(var s = 0; s<shop_list_in_name[father_input].length; s++){
+                            flag[s] = 0;//未被选中
+                            flag1[s] = 1;//选中
+                        }
+
+                        for(var w = 0; w<shop_list_in_name[father_input].length; w++){
+                            var li = shop_list_in_name[father_input][w].getElementsByTagName('input')[0];
+                            if(li.checked){
+                                flag[w] = 1;
+                            }else{
+                                flag1[w] = 0;
+                            }
+                        }
+                        var flag2 = 0;//标记全未选中
+                        var flag3 = 1;//标记全选中
+                        for(var f = 0; f<flag.length; f++){
+                            if(flag[f]){//
+                                flag2 = 1;//存在被选中元素
+                            }else{
+                                flag3 = 0;//存在未被选中元素
+                            }
+                        }
+                        var parent = get_pre(get_pre(shop_list_in_name[father_input][r].parentNode));
+                        if(!flag2){
+                            parent.getElementsByTagName('input')[0].checked = 0;
+                        }else{
+                            parent.getElementsByTagName('input')[0].checked = 1;
+                        }
+                        if(flag3){
+                            parent.getElementsByTagName('input')[0].checked = 1;
+                        }else{
+                            parent.getElementsByTagName('input')[0].checked = 0;
+                        }
+                    });
+                })(r);
+            }*/
+        })(father_input);
+    }
+    //所有input为checkbox的元素所在的div
+    var all_select = $('.select_con');
+    /**
+     * 全选按钮
+     */
+    for(var f = 0; f<select_all.length;f++){
+        (function (f) {
+            select_all[f].getElementsByTagName('input')[0].addEventListener('change',function () {
+                if(this.checked){
+                    selet_all(0,all_select);
+                }else{
+                    selet_all(1,all_select);
+                }
+            });
+        })(f);
+    }
+    /**
+     * 若商品被一一选中，则选中两个全选input
+     */
+    var g_list = $('.item-checkbox');
+    for (var i = 0; i < all_select.length; i++) {
+        (function (i) {
+            all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
+                var sum = 0;
+                for (var p = 0; p < g_list.length; p++) {
+                    if(g_list[p].getElementsByTagName('input')[0].checked){
+                        sum++;
+                    }
+                }
+                if(sum == g_list.length){
+                    for(var t = 0; t<select_all.length; t++){
+                        select_all[t].getElementsByTagName('input')[0].checked = 1;
+                    }
+                }else{
+                    for(var t = 0; t<select_all.length; t++){
+                        select_all[t].getElementsByTagName('input')[0].checked = 0;
+                    }
+                }
+            });
+        })(i);
+    }
+}
+function select_father() {
+    for(var father_input in shop_list_in_name){
+        var in_input = $('#'+father_input).getElementsByTagName('input')[0];
+        (function (father_input) {
             for(var r = 0; r<shop_list_in_name[father_input].length; r++){
                 /**
                  * flag[r] = true表示此checkbox被选中
@@ -129,47 +226,6 @@ function select() {
             }
         })(father_input);
     }
-    //所有input为checkbox的元素所在的div
-    var all_select = $('.select_con');
-    /**
-     * 全选按钮
-     */
-    for(var f = 0; f<select_all.length;f++){
-        (function (f) {
-            select_all[f].getElementsByTagName('input')[0].addEventListener('change',function () {
-                if(this.checked){
-                    selet_all(0,all_select);
-                }else{
-                    selet_all(1,all_select);
-                }
-            });
-        })(f);
-    }
-    /**
-     * 若商品被一一选中，则选中两个全选input
-     */
-    var g_list = $('.item-checkbox');
-    for (var i = 0; i < all_select.length; i++) {
-        (function (i) {
-            all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
-                var sum = 0;
-                for (var p = 0; p < g_list.length; p++) {
-                    if(g_list[p].getElementsByTagName('input')[0].checked){
-                        sum++;
-                    }
-                }
-                if(sum == g_list.length){
-                    for(var t = 0; t<select_all.length; t++){
-                        select_all[t].getElementsByTagName('input')[0].checked = 1;
-                    }
-                }else{
-                    for(var t = 0; t<select_all.length; t++){
-                        select_all[t].getElementsByTagName('input')[0].checked = 0;
-                    }
-                }
-            });
-        })(i);
-    }
 }
 /**
  * 删除商品 未添加恢复功能
@@ -180,27 +236,27 @@ function g_delete() {
         (function (i) {
             var delete_btn = g_list[i].parentNode.getElementsByClassName('item-delete')[0];
             delete_btn.addEventListener('click', function () {
-                delete_detail(this.parentNode);
+                delete_detail(this.parentNode.parentNode);
             });
         })(i);
     }
 }
 /**
  * 具体删除步骤
- * @param ele 要删除的行内的“删除”所在的div的父元素
+ * @param ele 要删除的行内的“删除”所在的li
  */
 function delete_detail(ele){
-//商店名称
-    var p_name = get_pre(ele.parentNode.parentNode);
+    var ul = ele.parentNode;
     //具体商品li的pre和nxt
-    var p = get_pre(ele.parentNode);
-    var n = get_nxt(ele.parentNode);
+    var p = get_pre(ele);
+    var n = get_nxt(ele);
     if (confirm('确定要删除此商品吗?')) {
-        ele.parentNode.remove(ele);
+        ele.parentNode.removeChild(ele);
     }
     if (p.nodeType == 3 && n.nodeType == 3) {
-        p_name.parentNode.remove(p_name);
+        ul.parentNode.parentNode.removeChild(ul.parentNode);
     }
+
 }
 /**
  * 监听所有checkbox，计算总pay和总number
@@ -306,20 +362,6 @@ function calculat_all_pay(arr) {
     pay_ele.innerHTML = '￥'+sum;
 }
 /**
- * 价格总额计算，这里监听每个商品是否被选中计算总价格和所有商品选到的总数
- */
-function show_price() {
-    var g_list = $('.item-checkbox');
-    var all_select = $('.select_con');
-    for(var i = 0; i<all_select.length; i++){
-        (function (i) {
-            all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
-                calculat_all_pay(g_list);
-            })
-        })(i);
-    }
-}
-/**
  * 通过选择父元素来全选子元素
  * @param flag input父元素的标记，若为true，则将子元素的input checked也设为true；
  * @param arr 所有子元素
@@ -368,6 +410,7 @@ function bg_change(ele,color){
 function cancel_choose() {
     var all_select = $('.select_con');
     var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
+    var g_list = $('.item-checkbox');
     for(var j = 0; j<all_select.length; j++){
         (function (j) {
             all_select[j].addEventListener('change',function () {
@@ -381,8 +424,9 @@ function cancel_choose() {
                                 var li = li_out.getElementsByTagName('input')[0];
                                 li.checked = 0;
                                 change_hook_bg(all_select);
-                                c(this.parentNode.parentNode);
-                                c(this.parentNode);
+                                search_number(g_list);
+                                calculat_all_pay(g_list);
+                                select_father();
                                 this.parentNode.parentNode.removeChild(this.parentNode);
                             })
                         })(i);
@@ -400,8 +444,9 @@ function add_pic() {
     var g_list = $('.item-checkbox');
     var show_pic = $('#show-pic');
     var show_pic_tmp = '<div class="pic-item" index="{sequence}"><img src="{src}"><div class="pic-delete">取消选择</div></div>';
-    var left_icon = '<div id="scroll_left_icon" class="scroll_icon"></div>';
-    var right_icon = '<div id="scroll_right_icon"  class="scroll_icon"></div>';
+    var left_icon = '<div id="scroll-left-icon" class="scroll-icon"></div>';
+    var right_icon = '<div id="scroll-right-icon"  class="scroll-icon"></div>';
+    var close_icon = '<div id="close-icon"></div>';
     for(var j = 0; j<all_select.length; j++) {
         (function (j) {
             all_select[j].addEventListener('change', function () {
@@ -418,13 +463,12 @@ function add_pic() {
                     }
                 }
                 _pic_html.push(right_icon);
+                _pic_html.push(close_icon);
                 show_pic.innerHTML = _pic_html.join('');
                 var pic_item = $('.pic-item');
                 for (var t = 0; t < pic_item.length; t++) {
                     pic_item[t].style.left = 80 + t * 104 + 'px';
                 }
-                c('length:'+$('.pic-item'));
-                c('length:'+$('.pic-item').length);
             });
         })(j);
     }
@@ -443,12 +487,13 @@ function show_pic() {
         }
 
     });
-
+    window.onscroll = function () {
+        show_pic.style.display = triangle.style.display ='none';
+    }
 
 }
 window.onload = function () {
     select();
-    show_price();
     number_inc_dec();
     g_delete();
     all_check();
