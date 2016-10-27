@@ -329,6 +329,18 @@ function search_number(arr) {
 function bg_change(ele,color){
     ele.style.backgroundColor = color;
 }
+function delete_pic(ele) {
+    var pic_delete = $('.pic-delete');
+    for(var i = 0; i<pic_delete.length; i++){
+        (function (i) {
+            pic_delete[i].addEventListener('click',function () {
+                var id = this.id;
+                
+            })
+        })(i);
+    }
+}
+
 window.onload = function () {
     select();
     show_price();

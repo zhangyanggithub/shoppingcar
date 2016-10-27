@@ -30,7 +30,7 @@
             </div>
             <div class="shop-name">店铺：相机</div>
             <ul class="store-in-list">
-                <li>
+                <li id="li-1">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="li-2">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -110,7 +110,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="li-3">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -161,7 +161,7 @@
             </div>
             <div class="shop-name">店铺：花朵</div>
             <ul class="store-in-list">
-                <li>
+                <li id="li-4">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -201,7 +201,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="li-5">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -241,7 +241,7 @@
                         </div>
                     </div>
                 </li>
-                <li>
+                <li id="li-6">
                     <div class="item-checkbox select select_con fl">
                         <div class="out-input">
                             <input type="checkbox" class="checkbox">
@@ -287,6 +287,12 @@
 
     </ul>
     <div id="pay">
+        <div id="show-pic">
+            <div class="pic-item" index="li-1">
+                <img src="images/1.jpg">
+                <div class="pic-delete">取消选择</div>
+            </div>
+        </div>
         <ul>
             <li class="select-all-input can-select select_con">
                 <div class="out-input">
@@ -299,7 +305,9 @@
             <li><a href="#">移入收藏夹</a></li>
             <li><a href="#">分享</a></li>
         </ul>
-        <div id="last-pay" class="g-pay-list">结算</div>
+        <div id="last-pay" class="g-pay-list">结算
+            <div id="little-triangle"></div>
+        </div>
         <div id="g-pay-all" class="g-pay-list">合计(不包括运费):<span>￥0</span></div>
         <div id="g-selected" class="g-pay-list">
             已选商品<span>0件</span>

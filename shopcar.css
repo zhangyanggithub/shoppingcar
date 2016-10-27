@@ -162,6 +162,11 @@ li{
     border: 1px solid #aaa;
 
 }
+.item-price{
+    font-family: Verdana,Tahoma,arial;
+    color: #000;
+    font-weight: bold;
+}
 .detail-number a{
     text-align: center;
 }
@@ -284,9 +289,58 @@ li{
     height:10px;
     padding: 0px 5px;
 }
+#pay .out-input{
+    top:17px;
+}
 #pay .all-last{
     position: absolute;
-    top: -4px;
+    top: 0;
     left: 34px;
 }
+#show-pic{
+    position: absolute;
+    width: 1186px;
+    min-height: 150px;
+    overflow: hidden;
+    bottom: 48px;
+    left: 0px;
+    border: thin solid red;
+    background-color: #FFF;
+}
+#show-pic .pic-item {
+    position: absolute;
+    top: 5px;
+    left: 72px;
+    margin: 5px 2px;
+    width: 83px;
+    height: 83px;
+    display: inline-block;
+    border: thin solid #ccc7c7;
+    background-color: #FFF;
+}
+#show-pic img{
+    width: 83px;
+    height: 83px;
+}
+.pic-delete{
+    display: none;
+    width: 48px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    color: #FFF;
+    background-color: rgba(0,0,0,.6);
+    padding: 1px 2px;
+}
+#show-pic .pic-item:hover .pic-delete{
+    display: block;
+}
+#little-triangle{
+    position: absolute;
+    top: 1px;
+    right: 60px;
+    border: 8px solid;
+    border-color: #FFF transparent transparent transparent;
 
+}
