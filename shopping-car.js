@@ -150,36 +150,25 @@ function select() {
      */
     var g_list = $('.item-checkbox');
     for (var i = 0; i < all_select.length; i++) {
-        all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
-            var sum = 0;
-            for (var p = 0; p < g_list.length; p++) {
-                if(g_list[p].getElementsByTagName('input')[0].checked){
-                    sum++;
-                }
-            }
-            if(sum == g_list.length){
-                for(var t = 0; t<select_all.length; t++){
-                    select_all[t].getElementsByTagName('input')[0].checked = 1;
-                }
-            }else{
-                for(var t = 0; t<select_all.length; t++){
-                    select_all[t].getElementsByTagName('input')[0].checked = 0;
-                }
-            }
-        });
-       /* var flag_0 = [];//未选中
-        var flag_1 = [];//选中
         (function (i) {
-            for (var p = 0; p < g_list.length; p++) {
-                flag_0[p] = 0;
-                flag_1[p] = 1;
-            }
-
-            var delete_btn = g_list[i].parentNode.getElementsByClassName('item-delete')[0];
-            delete_btn.addEventListener('click', function () {
-                delete_detail(this.parentNode);
+            all_select[i].getElementsByTagName('input')[0].addEventListener('change',function () {
+                var sum = 0;
+                for (var p = 0; p < g_list.length; p++) {
+                    if(g_list[p].getElementsByTagName('input')[0].checked){
+                        sum++;
+                    }
+                }
+                if(sum == g_list.length){
+                    for(var t = 0; t<select_all.length; t++){
+                        select_all[t].getElementsByTagName('input')[0].checked = 1;
+                    }
+                }else{
+                    for(var t = 0; t<select_all.length; t++){
+                        select_all[t].getElementsByTagName('input')[0].checked = 0;
+                    }
+                }
             });
-        })(i);*/
+        })(i);
     }
 }
 /**
@@ -384,16 +373,17 @@ function cancel_choose() {
             all_select[j].addEventListener('change',function () {
                 if(pay_all.innerHTML != '￥0'){
                     var pic_delete = $('.pic-delete');
-                    c('pic_delete.length'+pic_delete.length);
                     for(var i = 0; i<pic_delete.length; i++){
                         (function (i) {
                             pic_delete[i].addEventListener('click',function () {
-                                alert('dianjishanchu');
                                 var index = this.parentNode.getAttribute('index');
-                                c('index'+index);
-                                var li = $('#'+index).getElementsByClassName('out-input')[0].getElementsByTagName('input')[0];
+                                var li_out = $('#'+index).getElementsByClassName('out-input')[0];
+                                var li = li_out.getElementsByTagName('input')[0];
                                 li.checked = 0;
-                                this.parentNode.parentNode.remove(this.parentNode);
+                                change_hook_bg(all_select);
+                                c(this.parentNode.parentNode);
+                                c(this.parentNode);
+                                this.parentNode.parentNode.removeChild(this.parentNode);
                             })
                         })(i);
                     }
@@ -410,17 +400,17 @@ function add_pic() {
     var g_list = $('.item-checkbox');
     var show_pic = $('#show-pic');
     var show_pic_tmp = '<div class="pic-item" index="{sequence}"><img src="{src}"><div class="pic-delete">取消选择</div></div>';
-    var _pic_html = [];
     var left_icon = '<div id="scroll_left_icon" class="scroll_icon"></div>';
     var right_icon = '<div id="scroll_right_icon"  class="scroll_icon"></div>';
-    _pic_html.push(left_icon);
     for(var j = 0; j<all_select.length; j++) {
         (function (j) {
             all_select[j].addEventListener('change', function () {
-                for (var j = 0; j < g_list.length; j++) {
-                    if (g_list[j].getElementsByTagName('input')[0].checked) {
-                        var li_id = g_list[j].parentNode.id;
-                        var image = g_list[j].parentNode.getElementsByClassName('item-show')[0].getElementsByTagName('img')[0];
+                var _pic_html = [];
+                _pic_html.push(left_icon);
+                for (var s = 0; s < g_list.length; s++) {
+                    if (g_list[s].getElementsByTagName('input')[0].checked) {
+                        var li_id = g_list[s].parentNode.id;
+                        var image = g_list[s].parentNode.getElementsByClassName('item-show')[0].getElementsByTagName('img')[0];
                         var new_tmp = show_pic_tmp
                             .replace(/\{sequence\}/g, li_id)
                             .replace(/\{src\}/g, image.src);
@@ -433,6 +423,8 @@ function add_pic() {
                 for (var t = 0; t < pic_item.length; t++) {
                     pic_item[t].style.left = 80 + t * 104 + 'px';
                 }
+                c('length:'+$('.pic-item'));
+                c('length:'+$('.pic-item').length);
             });
         })(j);
     }
