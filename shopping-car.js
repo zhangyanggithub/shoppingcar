@@ -317,7 +317,6 @@ function all_check() {
                 change_hook_bg(all_select);
                 search_number(g_list);
                 calculat_all_pay(g_list);
-                c('ing');
             });
         })(s);
     }
@@ -529,14 +528,18 @@ function show_pic() {
     var show_btn = $('#show-selected');
     var triangle = $('#little-triangle');
     var show_pic = $('#show-pic');
+    var show_selected = $('#show-selected').getElementsByTagName('a')[0];
     show_btn.addEventListener('click',function () {
         if(pay_all.innerHTML != '￥0'){
             show_pic.style.display = triangle.style.display ='block';
+            show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -53px;'
         }
 
     });
     window.onscroll = function () {
         show_pic.style.display = triangle.style.display ='none';
+        show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -23px;'
+
     }
 
 }

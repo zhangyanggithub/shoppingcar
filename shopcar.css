@@ -281,17 +281,16 @@ li{
 }
 #show-selected{
     display: inline-block;
-    width:10px;
-    height:10px;
-
+    width: 11px;
+    height: 10px;
 }
 #show-selected a{
-    font-size: 20px;
-    background: #B0B0B0;
-    color:#FFF;
-    width:10px;
-    height:10px;
-    padding: 0px 5px;
+    background: url("images/all_bg.png") no-repeat -60px -23px;
+    //url(images/all_bg.png) no-repeat -60px -53px;
+    color: #FFF;
+    width: 20px;
+    height: 12px;
+    display: inline-block;
 }
 #pay .out-input{
     top:17px;
