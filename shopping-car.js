@@ -1,3 +1,4 @@
+//商店名称下的所有input
 var shop_list_in_name = {};
 /**
  * 通过类名或者id获取元素
@@ -50,8 +51,6 @@ function select() {
     var select_all = $('.select-all-input');
     //获取商店list所在行
     var shop_select = $('.store-in-list');
-    //商店名称下的所有input
-    // var shop_list_in_name = {};
     for(var i = 0; i<shop_select.length; i++){
         //商店名称所在行的input元素
         var shop_name;
@@ -82,53 +81,6 @@ function select() {
                 }
             });
             select_father();
-            /*for(var r = 0; r<shop_list_in_name[father_input].length; r++){
-                /!**
-                 * flag[r] = true表示此checkbox被选中
-                 * @type {boolean}
-                 *!/
-                (function (r) {
-                    var shop_li = shop_list_in_name[father_input][r].getElementsByTagName('input')[0];
-                    //监听每个商店的选中状态
-                    shop_li.addEventListener('change',function () {
-                        var flag = [];
-                        var flag1 = [];
-                        for(var s = 0; s<shop_list_in_name[father_input].length; s++){
-                            flag[s] = 0;//未被选中
-                            flag1[s] = 1;//选中
-                        }
-
-                        for(var w = 0; w<shop_list_in_name[father_input].length; w++){
-                            var li = shop_list_in_name[father_input][w].getElementsByTagName('input')[0];
-                            if(li.checked){
-                                flag[w] = 1;
-                            }else{
-                                flag1[w] = 0;
-                            }
-                        }
-                        var flag2 = 0;//标记全未选中
-                        var flag3 = 1;//标记全选中
-                        for(var f = 0; f<flag.length; f++){
-                            if(flag[f]){//
-                                flag2 = 1;//存在被选中元素
-                            }else{
-                                flag3 = 0;//存在未被选中元素
-                            }
-                        }
-                        var parent = get_pre(get_pre(shop_list_in_name[father_input][r].parentNode));
-                        if(!flag2){
-                            parent.getElementsByTagName('input')[0].checked = 0;
-                        }else{
-                            parent.getElementsByTagName('input')[0].checked = 1;
-                        }
-                        if(flag3){
-                            parent.getElementsByTagName('input')[0].checked = 1;
-                        }else{
-                            parent.getElementsByTagName('input')[0].checked = 0;
-                        }
-                    });
-                })(r);
-            }*/
         })(father_input);
     }
     //所有input为checkbox的元素所在的div
@@ -298,10 +250,10 @@ function delete_detail(ele){
     var p = get_pre(ele);
     var n = get_nxt(ele);
     if (confirm('确定要删除此商品吗?')) {
-        ele.parentNode.removeChild(ele);
+        ele.remove(ele);
     }
     if (p.nodeType == 3 && n.nodeType == 3) {
-        ul.parentNode.parentNode.removeChild(ul.parentNode);
+        ul.parentNode.remove();
     }
 
 }
@@ -529,19 +481,77 @@ function show_pic() {
     var triangle = $('#little-triangle');
     var show_pic = $('#show-pic');
     var show_selected = $('#show-selected').getElementsByTagName('a')[0];
+    var index = 0;
+    var close_icon;
     show_btn.addEventListener('click',function () {
+        close_icon = $('#close-icon');
+        close_icon.addEventListener('click',function () {
+            hide_pic_fun(show_pic,show_selected);
+        });
         if(pay_all.innerHTML != '￥0'){
-            show_pic.style.display = triangle.style.display ='block';
-            show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -53px;'
+            index++;
+            if(index%2){
+                show_pic_fun(show_pic,show_selected);
+            }else{
+                hide_pic_fun(show_pic,show_selected);
+            }
+        }
+    });
+    window.onscroll = function () {
+        hide_pic_fun(show_pic,show_selected);
+    };
+    function show_pic_fun(show_pic,show_selected) {
+        show_pic.style.display = triangle.style.display ='block';
+        show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -53px;'
+    }
+    function hide_pic_fun(show_pic,show_selected) {
+        show_pic.style.display = triangle.style.display ='none';
+        show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -23px;'
+    }
+}
+function delete_more() {
+    var delete_more = $('#delete-more');
+    var g_list = $('.item-checkbox');
+    var pay_all = $('#g-pay-all').getElementsByTagName('span')[0];
+    var invalided =  $('#invalided');
+    var new_g_list = [];
+    for(var t = 0; t<g_list.length; t++){
+        new_g_list[t] = g_list[t];
+    }
+/*    invalided.getElementsByTagName('a')[0].addEventListener('click',function () {
+        if (confirm('确定要删除这些商品吗?')) {
+            for(var i = 0; i<new_g_list.length; i++){
+                if(new_g_list[i].parentNode.getAttribute('invalid')){
+                    var shop_name = new_g_list[i].parentNode.parentNode;
+                    new_g_list[i].parentNode.remove();
+                    if(shop_name.children.length == 0){
+                        shop_name.parentNode.remove();
+                    }
+                }
+            }
+        }
+
+    });*/
+    delete_more.getElementsByTagName('a')[0].addEventListener('click',function () {
+        if(pay_all.innerHTML != '￥0'){
+            if (confirm('确定要删除这些商品吗?')) {
+                for(var i = 0; i<new_g_list.length; i++){
+                    if(new_g_list[i].getElementsByTagName('input')[0].checked){
+                        var shop_name = new_g_list[i].parentNode.parentNode;
+                        new_g_list[i].parentNode.remove();
+                        if(shop_name.children.length == 0){
+                            shop_name.parentNode.remove();
+                        }
+                    }
+                }
+                search_number(g_list);
+                calculat_all_pay(g_list);
+            }
+        }else{
+            alert('请选择商品');
         }
 
     });
-    window.onscroll = function () {
-        show_pic.style.display = triangle.style.display ='none';
-        show_selected.style.cssText = 'background: url("images/all_bg.png") no-repeat -60px -23px;'
-
-    }
-
 }
 window.onload = function () {
     select();
@@ -552,4 +562,5 @@ window.onload = function () {
     add_pic();
     show_pic();
     cancel_choose();
+    delete_more();
 };

@@ -9,6 +9,7 @@ a{
 input[type=checkbox]{
     width: 15px;
     height: 15px;
+    cursor: pointer;
 }
 .g-car-content{
     position: relative;
@@ -30,7 +31,6 @@ input[type=checkbox]{
     position: absolute;
     top: 0;
     left: 0;
-
 }
 .all{
     position: absolute;
@@ -286,7 +286,6 @@ li{
 }
 #show-selected a{
     background: url("images/all_bg.png") no-repeat -60px -23px;
-    //url(images/all_bg.png) no-repeat -60px -53px;
     color: #FFF;
     width: 20px;
     height: 12px;
