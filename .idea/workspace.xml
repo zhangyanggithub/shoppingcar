@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02e5a1d-8062-4569-bd19-fa0f52f63289" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/zy_define.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/window.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/alert.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_alert.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/t.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopping-car.js" afterPath="$PROJECT_DIR$/shopping-car.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingCar.html" afterPath="$PROJECT_DIR$/shoppingCar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zy_define.js" afterPath="$PROJECT_DIR$/zy_define.js" />
     </list>
     <ignored path="shoppingcar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,34 +87,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="zy_define.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="zy_define.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zy_define.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state relative-caret-position="240">
+              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
               <folding>
-                <element signature="e#46#446#0" expanded="false" />
-                <element signature="e#67#439#0" expanded="false" />
-                <element signature="e#474#3820#0" expanded="false" />
-                <element signature="e#508#1596#0" expanded="false" />
-                <element signature="e#1638#2646#0" expanded="false" />
-                <element signature="e#2673#2986#0" expanded="false" />
-                <element signature="e#3012#3051#0" expanded="false" />
-                <element signature="e#3085#3436#0" expanded="false" />
-                <element signature="e#3470#3813#0" expanded="false" />
-                <element signature="e#3857#4021#0" expanded="false" />
+                <element signature="e#2543#2856#0" expanded="false" />
+                <element signature="e#2882#2921#0" expanded="false" />
+                <element signature="e#2955#3306#0" expanded="false" />
+                <element signature="e#3340#3683#0" expanded="false" />
+                <element signature="e#3727#3891#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="t.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/t.html">
+      <file leaf-file-name="alert.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/alert.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+            <state relative-caret-position="649">
+              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_alert.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_alert.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="61" column="9" selection-start-line="6" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="X.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/images/X.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
@@ -144,7 +155,9 @@
         <option value="$PROJECT_DIR$/zy_alert.js" />
         <option value="$PROJECT_DIR$/shopping-car.js" />
         <option value="$PROJECT_DIR$/t.html" />
+        <option value="$PROJECT_DIR$/test_alert.html" />
         <option value="$PROJECT_DIR$/zy_define.js" />
+        <option value="$PROJECT_DIR$/alert.css" />
       </list>
     </option>
   </component>
@@ -299,12 +312,12 @@
       <workItem from="1477440474929" duration="29439000" />
       <workItem from="1477526500740" duration="30959000" />
       <workItem from="1477613313880" duration="17950000" />
-      <workItem from="1477700601167" duration="21594000" />
+      <workItem from="1477700601167" duration="22969000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141080000" />
+    <option name="totallyTimeSpent" value="142455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -312,13 +325,13 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09378961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -756,6 +769,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/X.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shopping-car.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -783,30 +801,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/t.html">
+    <entry file="file://$PROJECT_DIR$/zy_define.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        <state relative-caret-position="240">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#2543#2856#0" expanded="false" />
+            <element signature="e#2882#2921#0" expanded="false" />
+            <element signature="e#2955#3306#0" expanded="false" />
+            <element signature="e#3340#3683#0" expanded="false" />
+            <element signature="e#3727#3891#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="61" column="9" selection-start-line="6" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zy_define.js">
+    <entry file="file://$PROJECT_DIR$/alert.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-          <folding>
-            <element signature="e#46#446#0" expanded="false" />
-            <element signature="e#67#439#0" expanded="false" />
-            <element signature="e#474#3820#0" expanded="false" />
-            <element signature="e#508#1596#0" expanded="false" />
-            <element signature="e#1638#2646#0" expanded="false" />
-            <element signature="e#2673#2986#0" expanded="false" />
-            <element signature="e#3012#3051#0" expanded="false" />
-            <element signature="e#3085#3436#0" expanded="false" />
-            <element signature="e#3470#3813#0" expanded="false" />
-            <element signature="e#3857#4021#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="649">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

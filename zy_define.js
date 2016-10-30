@@ -30,11 +30,9 @@ define(function () {
                 div.innerHTML += new_cfg.content_handle_cancel;
             }
             div.innerHTML += div_close;
-            document.body.style.backgroundColor = '#666';
+            document.body.style.backgroundColor = ' #8b8b8b';
         },
         zy_handle:function (class_name) {
-            var my_cfg = {width:'300',height:'200',content_head:'删除商品',content_body:'确定要删除该商品吗？'};
-            this.zy_alert(my_cfg);
             var div = this.$('.'+class_name)[0];
             var sure = div.getElementsByClassName('yes')[0];
             var cancel = div.getElementsByClassName('no')[0];
@@ -110,4 +108,5 @@ define(function () {
     };*/
     var alert_zy = new zy_define();
     alert_zy.zy_alert({has_cancel:'1'});
+    alert_zy.zy_handle('alert-attr');
 });
