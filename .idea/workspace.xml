@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e02e5a1d-8062-4569-bd19-fa0f52f63289" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/no_alert_shopingcar.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/alert.css" afterPath="$PROJECT_DIR$/alert.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shopping-car.js" afterPath="$PROJECT_DIR$/shopping-car.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shoppingCar.html" afterPath="$PROJECT_DIR$/shoppingCar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/zy_define.js" afterPath="$PROJECT_DIR$/zy_define.js" />
     </list>
     <ignored path="shoppingcar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shoppingCar.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="shoppingCar.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shoppingCar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
+            <state relative-caret-position="330">
+              <caret line="189" column="23" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -58,7 +56,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="shopping-car.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shopping-car.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
@@ -85,6 +83,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="no_alert_shopingcar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/no_alert_shopingcar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8465">
+              <caret line="499" column="25" selection-start-line="499" selection-start-column="25" selection-end-line="499" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="zy_define.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zy_define.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,16 +109,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="alert.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/alert.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_alert.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_alert.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,13 +116,6 @@
               <caret line="61" column="9" selection-start-line="6" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="X.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/X.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -152,10 +143,11 @@
         <option value="$PROJECT_DIR$/zy_alert.js" />
         <option value="$PROJECT_DIR$/t.html" />
         <option value="$PROJECT_DIR$/test_alert.html" />
-        <option value="$PROJECT_DIR$/shoppingCar.html" />
         <option value="$PROJECT_DIR$/alert.css" />
         <option value="$PROJECT_DIR$/zy_define.js" />
         <option value="$PROJECT_DIR$/shopping-car.js" />
+        <option value="$PROJECT_DIR$/no_alert_shopingcar.js" />
+        <option value="$PROJECT_DIR$/shoppingCar.html" />
       </list>
     </option>
   </component>
@@ -311,12 +303,12 @@
       <workItem from="1477526500740" duration="30959000" />
       <workItem from="1477613313880" duration="17950000" />
       <workItem from="1477700601167" duration="23076000" />
-      <workItem from="1477871977812" duration="9993000" />
+      <workItem from="1477871977812" duration="11428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152555000" />
+    <option name="totallyTimeSpent" value="153990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -752,25 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shoppingCar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="52" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#2;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#13810#29006#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/alert.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -814,6 +787,33 @@
             <element signature="e#17433#19157#0" expanded="false" />
             <element signature="e#19820#19976#0" expanded="false" />
             <element signature="e#20240#21061#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/no_alert_shopingcar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8465">
+          <caret line="499" column="25" selection-start-line="499" selection-start-column="25" selection-end-line="499" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shoppingCar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="189" column="23" selection-start-line="189" selection-start-column="23" selection-end-line="189" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#0;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#1;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#2;n#ul#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#1;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#2;n#ul#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#13810#29006#0" expanded="false" />
           </folding>
         </state>
       </provider>
