@@ -45,7 +45,7 @@
 .no:hover{
     color:#f40;
 }
-.alert_close{
+.alert-close{
     cursor: pointer;
     width: 15px;
     height: 15px;

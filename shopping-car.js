@@ -107,7 +107,6 @@ require(['zy_define'],function (my_alert) {
             for (var i = 0; i < g_list.length; i++) {
                 (function (i) {
                     g_list[i].getElementsByTagName('input')[0].addEventListener('change', function () {
-                        a.c('ing');
                         that.select_father_detail(a.get_pre(a.get_pre(g_list[i].parentNode.parentNode)));
                     });
                 })(i);
@@ -163,12 +162,14 @@ require(['zy_define'],function (my_alert) {
             //具体商品li的pre和nxt
             var p = a.get_pre(ele);
             var n = a.get_nxt(ele);
-            if (confirm('确定要删除此商品吗?')) {
+            var cfg = {has_cancel:'1',alert_head:"删除商品提示",alert_body:"确定要删除此商品吗?"};
+            this.alert_detail(cfg);
+        /*    if (confirm('确定要删除此商品吗?')) {
                 ele.remove(ele);
             }
             if (p.nodeType == 3 && n.nodeType == 3) {
                 ul.parentNode.remove();
-            }
+            }*/
         },
         /**
          * 监听所有checkbox变化，改变所选商品总数和总额，并改变input背景（红色对号）
@@ -425,47 +426,24 @@ require(['zy_define'],function (my_alert) {
          */
         delete_more: function () {
             var that = this;
-            var delete_more = new my_alert.zy_define().$('#delete-more');
-            var g_list = new my_alert.zy_define().$('.item-checkbox');
-            var pay_all = new my_alert.zy_define().$('#g-pay-all').getElementsByTagName('span')[0];
-            var invalided = new my_alert.zy_define().$('#invalided');
+            var a = new my_alert.zy_define();
+            var delete_more = a.$('#delete-more');
+            var g_list = a.$('.item-checkbox');
+            var pay_all = a.$('#g-pay-all').getElementsByTagName('span')[0];
+            var invalided = a.$('#invalided');
             var new_g_list = [];
             for (var t = 0; t < g_list.length; t++) {
                 new_g_list[t] = g_list[t];
             }
-            /*    invalided.getElementsByTagName('a')[0].addEventListener('click',function () {
-             if (confirm('确定要删除这些商品吗?')) {
-             for(var i = 0; i<new_g_list.length; i++){
-             if(new_g_list[i].parentNode.getAttribute('invalid')){
-             var shop_name = new_g_list[i].parentNode.parentNode;
-             new_g_list[i].parentNode.remove();
-             if(shop_name.children.length == 0){
-             shop_name.parentNode.remove();
-             }
-             }
-             }
-             }
-
-             });*/
             delete_more.getElementsByTagName('a')[0].addEventListener('click', function () {
                 if (pay_all.innerHTML != '￥0') {
-                    if (confirm('确定要删除这些商品吗?')) {
-                        for (var i = 0; i < new_g_list.length; i++) {
-                            if (new_g_list[i].getElementsByTagName('input')[0].checked) {
-                                var shop_name = new_g_list[i].parentNode.parentNode;
-                                new_g_list[i].parentNode.remove();
-                                if (shop_name.children.length == 0) {
-                                    shop_name.parentNode.remove();
-                                }
-                            }
-                        }
-                        that.search_number(g_list);
-                        that.calculate_all_pay(g_list);
-                    }
+                    var cfg = {has_cancel:'1',alert_head:"删除商品提示",alert_body:"确定要删除这些商品吗?"};
+                    that.alert_detail(cfg);
                 } else {
-                    alert('请选择商品');
-                }
+                    var cfg = {has_cancel:'0',alert_head:"提示",alert_body:"您未选择商品，请选择！"};
+                    that.alert_detail(cfg);
 
+                }
             });
         },
         /**
@@ -487,6 +465,47 @@ require(['zy_define'],function (my_alert) {
                     });
                 })(i);
             }
+        },
+        alert_detail:function (cfg) {
+            var that = this;
+            var a = new my_alert.zy_define();
+            var g_list = a.$('.item-checkbox');
+            var invalided = a.$('#invalided');
+            var new_g_list = [];
+            for (var t = 0; t < g_list.length; t++) {
+                new_g_list[t] = g_list[t];
+            }
+            a.zy_alert(cfg);
+            var sure = a.$('.yes')[0];
+            var no = a.$('.no')[0];
+            var close = a.$('.alert-close')[0];
+            sure.addEventListener('click',function () {
+                this.parentNode.remove();
+                a.$('.alert_bg')[0].remove();
+                for (var i = 0; i < new_g_list.length; i++) {
+                    if (new_g_list[i].getElementsByTagName('input')[0].checked) {
+                        var shop_name = new_g_list[i].parentNode.parentNode;
+                        a.c(new_g_list[i].parentNode);
+                        new_g_list[i].parentNode.remove();
+                        if (shop_name.children.length == 0) {
+                            shop_name.parentNode.remove();
+                        }
+                    }
+                }
+                that.search_number(g_list);
+                that.calculate_all_pay(g_list);
+
+            });
+            if(parseInt(a.cfg.has_cancel)){
+                no.addEventListener('click',function () {
+                    a.$('.alert_bg')[0].remove();
+                    this.parentNode.remove();
+                });
+            }
+            close.addEventListener('click',function () {
+                a.$('.alert_bg')[0].remove();
+                this.parentNode.remove();
+            });
         },
     };
         var shop = new shopping_car();
