@@ -351,16 +351,16 @@ require(['zy_define'],function (my_alert) {
         add_pic: function () {
             var all_select = new my_alert.zy_define().$('.select_con');
             var g_list = new my_alert.zy_define().$('.item-checkbox');
-            var show_pic = new my_alert.zy_define().$('#show-pic');
+            var show_pic = new my_alert.zy_define().$('#control-scan');
             var show_pic_tmp = '<div class="pic-item" index="{sequence}"><img src="{src}"><div class="pic-delete">取消选择</div></div>';
-            var left_icon = '<div id="scroll-left-icon" class="scroll-icon"></div>';
+           /* var left_icon = '<div id="scroll-left-icon" class="scroll-icon"></div>';
             var right_icon = '<div id="scroll-right-icon"  class="scroll-icon"></div>';
-            var close_icon = '<div id="close-icon"></div>';
+            var close_icon = '<div id="close-icon"></div>';*/
             for (var j = 0; j < all_select.length; j++) {
                 (function (j) {
                     all_select[j].addEventListener('change', function () {
                         var _pic_html = [];
-                        _pic_html.push(left_icon);
+                        // _pic_html.push(left_icon);
                         for (var s = 0; s < g_list.length; s++) {
                             if (g_list[s].getElementsByTagName('input')[0].checked) {
                                 var li_id = g_list[s].parentNode.id;
@@ -371,8 +371,6 @@ require(['zy_define'],function (my_alert) {
                                 _pic_html.push(new_tmp);
                             }
                         }
-                        _pic_html.push(right_icon);
-                        _pic_html.push(close_icon);
                         show_pic.innerHTML = _pic_html.join('');
                         var pic_item = new my_alert.zy_define().$('.pic-item');
                         for (var t = 0; t < pic_item.length; t++) {

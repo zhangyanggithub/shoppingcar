@@ -357,6 +357,12 @@ li{
     position: absolute;
     background: transparent url("images/all_bg.png") no-repeat -18px -24px;
 }
+#control-scan{
+    height: 102px;
+    width: 1120px;
+    position: relative;
+    overflow: hidden;
+}
 #scroll-right-icon{
     right: 35px;
     top: 36px;
